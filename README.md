@@ -4,6 +4,8 @@
 ####Link to final video output:
 Here's a [link to my video result](./project_video__marked_result.mp4)
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Q0W7YGGQih8/0.jpg)](https://www.youtube.com/watch?v=Q0W7YGGQih8WA)
+
 ####Description: software pipeline to detect vehicles in a video.  
 
 * Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
