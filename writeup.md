@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [image1]: ./examples/car_not_car.png
 [image2]: ./examples/HOG_example.png
 [image3]: ./examples/sliding_windows.png
-[image4]: ./examples/sliding_window.png
+[image4]: ./examples/sliding_window.jpg
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/labels_map.png
 [image7]: ./examples/output_bboxes.png
@@ -34,7 +34,7 @@ The goals / steps of this project are the following:
 
 ####1. HOG features extraction from training images.
 
-The code for this step is contained in the third code cell of the IPython notebook starting at line 10
+The code for this step is contained in the code cell #3 of the IPython notebook starting at line #10
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
@@ -47,23 +47,30 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 ![alt text][image2]
 
-####2. Final choice of HOG parameters:
+####2. Trained a classifier using your selected HOG features and color features...
 
-I tried various combinations of parameters to maximize accuracy of the SVM.
+I tried various combinations of parameters to maximize accuracy of SVM. (Linear SVM (scikit-learn) used over HOG and Color features -Jupyter Notebook CodeCell #6 & #7)
 
-####3. Trained a classifier using your selected HOG features and color features:
+  Final choice of HOG parameters:
+  HOG orientations = 9  
+  HOG pixels per cell = 8
+  HOG cells per block = 2
+  HOG channel = "ALL"
 
-I trained a linear SVM using...
+  Final choice of histogram for colorspace:
+  Spatial binning dimensions = (32, 32)
+  Number of histogram bins = 32    
 
 ###Sliding Window Search
 
-####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+####1. Sliding window search.  Scales to search and how much to overlap windows:
 
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
+Jupyter Notebook code cell #9, line #20
+I decided to search window positions across bottom portion of image(by specifying y-start) at multiple random scales and came up with:
 
 ![alt text][image3]
 
-####2. Examples of test images.  What did you do to optimize the performance of your classifier?
+####2. Examples of test images.  Optimization of the performance of classifier:
 
 Ultimately I searched on five scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
@@ -73,7 +80,7 @@ Ultimately I searched on five scales using YCrCb 3-channel HOG features plus spa
 ### Video Implementation
 
 ####1. Link to final video output:
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./project_video__marked_result.mp4)
 
 ####2. Implemented filter for false positives and some method for combining overlapping bounding boxes:
 
