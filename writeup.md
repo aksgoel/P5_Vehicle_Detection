@@ -27,7 +27,7 @@ The goals / steps of this project are the following:
 [image4]: ./examples/sliding_window.jpg
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/labels_map.png
-[image7]: ./examples/output_bboxes.png
+[image7]: ./examples/result.png
 [video1]: ./project_video.mp4
 
 ---
@@ -74,9 +74,7 @@ I decided to search window positions across bottom portion of image(by specifyin
 
 ####2. Examples of test images.  Optimization of the performance of classifier:
 
-Ultimately I searched on five scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
-
-![alt text][image4]
+Ultimately I searched on five scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.
 ---
 
 ### Video Implementation
@@ -93,9 +91,6 @@ Here's an example result showing the heatmap from a series of frames of video, t
 ### Here are six frames and their corresponding heatmaps:
 
 ![alt text][image5]
-
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![alt text][image6]
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
 ![alt text][image7]
