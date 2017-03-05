@@ -49,17 +49,19 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 ####2. Trained a classifier using your selected HOG features and color features...
 
-I tried various combinations of parameters to maximize accuracy of SVM. (Linear SVM (scikit-learn) used over HOG and Color features -Jupyter Notebook CodeCell #6 & #7)
+I tried various combinations of parameters to maximize accuracy of SVM. Linear SVM (scikit-learn) used over HOG and Color features -Jupyter Notebook CodeCell #6 & #7.
 
   Final choice of HOG parameters:
-  HOG orientations = 9  
-  HOG pixels per cell = 8
-  HOG cells per block = 2
-  HOG channel = "ALL"
+
+  ` HOG orientations = 9  
+    HOG pixels per cell = 8
+    HOG cells per block = 2
+    HOG channel = "ALL"`
 
   Final choice of histogram for colorspace:
-  Spatial binning dimensions = (32, 32)
-  Number of histogram bins = 32    
+
+  `Spatial binning dimensions = (32, 32)
+   Number of histogram bins = 32`
 
 ###Sliding Window Search
 
