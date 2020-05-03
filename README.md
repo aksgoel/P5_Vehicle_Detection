@@ -1,12 +1,12 @@
 # Vehicle Detection
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-####Link to final video output:
+#### Link to final video output:
 Here's a [link to my video result](./project_video__marked_result.mp4):
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FffdNzbkIZc/0.jpg)](https://www.youtube.com/watch?v=FffdNzbkIZc)
 
-####Description: software pipeline to detect vehicles in a video.  
+#### Description: software pipeline to detect vehicles in a video.  
 
 * Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
 * Apply a color transform and append binned color features, as well as histograms of color, to HOG feature vector.
